@@ -37,58 +37,64 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comBoxRes = new System.Windows.Forms.ComboBox();
             this.btnCheckURL = new System.Windows.Forms.Button();
-            this.labCheckURLStatus = new System.Windows.Forms.Label();
             this.progBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 46);
+            this.label1.Location = new System.Drawing.Point(56, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(65, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "URL link:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 143);
+            this.label2.Location = new System.Drawing.Point(60, 176);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(37, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Path";
             // 
             // txtURL
             // 
-            this.txtURL.Location = new System.Drawing.Point(124, 43);
+            this.txtURL.Location = new System.Drawing.Point(165, 53);
+            this.txtURL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtURL.Name = "txtURL";
-            this.txtURL.Size = new System.Drawing.Size(223, 20);
+            this.txtURL.Size = new System.Drawing.Size(300, 22);
             this.txtURL.TabIndex = 2;
-            this.txtURL.Text = "url link";
+            this.txtURL.Text = "ENTER LINK HERE";
+            this.txtURL.Click += new System.EventHandler(this.txtURL_Click);
             // 
             // txtPath
             // 
-            this.txtPath.Location = new System.Drawing.Point(128, 140);
+            this.txtPath.Location = new System.Drawing.Point(171, 172);
+            this.txtPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPath.Name = "txtPath";
-            this.txtPath.Size = new System.Drawing.Size(177, 20);
+            this.txtPath.Size = new System.Drawing.Size(235, 22);
             this.txtPath.TabIndex = 3;
             this.txtPath.Text = "enter Path";
             this.txtPath.Click += new System.EventHandler(this.txtPath_Click);
             // 
             // txtBoxLog
             // 
-            this.txtBoxLog.Location = new System.Drawing.Point(128, 324);
+            this.txtBoxLog.Location = new System.Drawing.Point(171, 399);
+            this.txtBoxLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxLog.Name = "txtBoxLog";
-            this.txtBoxLog.Size = new System.Drawing.Size(464, 83);
+            this.txtBoxLog.Size = new System.Drawing.Size(617, 101);
             this.txtBoxLog.TabIndex = 4;
             this.txtBoxLog.Text = "";
             // 
             // btnDownload
             // 
-            this.btnDownload.Location = new System.Drawing.Point(128, 199);
+            this.btnDownload.Location = new System.Drawing.Point(171, 245);
+            this.btnDownload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Size = new System.Drawing.Size(119, 37);
+            this.btnDownload.Size = new System.Drawing.Size(159, 46);
             this.btnDownload.TabIndex = 5;
             this.btnDownload.Text = "Download";
             this.btnDownload.UseVisualStyleBackColor = true;
@@ -97,53 +103,47 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 82);
+            this.label3.Location = new System.Drawing.Point(37, 101);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.Size = new System.Drawing.Size(118, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Select Resolution";
             // 
             // comBoxRes
             // 
             this.comBoxRes.FormattingEnabled = true;
-            this.comBoxRes.Location = new System.Drawing.Point(124, 79);
+            this.comBoxRes.Location = new System.Drawing.Point(165, 97);
+            this.comBoxRes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comBoxRes.Name = "comBoxRes";
-            this.comBoxRes.Size = new System.Drawing.Size(121, 21);
+            this.comBoxRes.Size = new System.Drawing.Size(160, 24);
             this.comBoxRes.TabIndex = 7;
             // 
             // btnCheckURL
             // 
-            this.btnCheckURL.Location = new System.Drawing.Point(374, 43);
+            this.btnCheckURL.Location = new System.Drawing.Point(473, 43);
+            this.btnCheckURL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCheckURL.Name = "btnCheckURL";
-            this.btnCheckURL.Size = new System.Drawing.Size(75, 23);
+            this.btnCheckURL.Size = new System.Drawing.Size(130, 44);
             this.btnCheckURL.TabIndex = 8;
             this.btnCheckURL.Text = "Check URL";
             this.btnCheckURL.UseVisualStyleBackColor = true;
             this.btnCheckURL.Click += new System.EventHandler(this.btnCheckURL_Click);
             // 
-            // labCheckURLStatus
-            // 
-            this.labCheckURLStatus.AutoSize = true;
-            this.labCheckURLStatus.Location = new System.Drawing.Point(465, 46);
-            this.labCheckURLStatus.Name = "labCheckURLStatus";
-            this.labCheckURLStatus.Size = new System.Drawing.Size(85, 13);
-            this.labCheckURLStatus.TabIndex = 9;
-            this.labCheckURLStatus.Text = "lab check status";
-            // 
             // progBar
             // 
-            this.progBar.Location = new System.Drawing.Point(128, 255);
+            this.progBar.Location = new System.Drawing.Point(171, 314);
+            this.progBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.progBar.Name = "progBar";
-            this.progBar.Size = new System.Drawing.Size(464, 23);
+            this.progBar.Size = new System.Drawing.Size(619, 28);
             this.progBar.TabIndex = 10;
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 437);
+            this.ClientSize = new System.Drawing.Size(1095, 538);
             this.Controls.Add(this.progBar);
-            this.Controls.Add(this.labCheckURLStatus);
             this.Controls.Add(this.btnCheckURL);
             this.Controls.Add(this.comBoxRes);
             this.Controls.Add(this.label3);
@@ -153,6 +153,7 @@
             this.Controls.Add(this.txtURL);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainWindow";
             this.Text = "Advanced Youtube to MP3 downloader";
             this.ResumeLayout(false);
@@ -171,7 +172,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comBoxRes;
         private System.Windows.Forms.Button btnCheckURL;
-        private System.Windows.Forms.Label labCheckURLStatus;
         private System.Windows.Forms.ProgressBar progBar;
     }
 }

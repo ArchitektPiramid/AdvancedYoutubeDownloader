@@ -22,7 +22,7 @@ namespace AdvancedYoutubeDownloader
         {
             InitializeComponent();
             txtPath.Text = ConfigurationManager.AppSettings["lastPath"];
-            labCheckURLStatus.Text = "";
+            
             this.logBox("Program version v" + ProgramInfo.appVersion, newLine: false);
             this.logBox("  |  release: " + ProgramInfo.releaseDate);
         }
@@ -34,7 +34,7 @@ namespace AdvancedYoutubeDownloader
             {
                 videoInfos = DownloadUrlResolver.GetDownloadUrls(url);
 
-                labCheckURLStatus.Text = "OK!";
+                // ok url
                 comBoxRes.Items.Clear();
                 foreach (var a in videoInfos)
                 {
@@ -51,7 +51,7 @@ namespace AdvancedYoutubeDownloader
             }
             catch (System.ArgumentException)
             {
-                labCheckURLStatus.Text = "Not a valid URL!";
+                // nvalid url
                 this.logBox("Wrong URL. Paste correct.", Color.Red);
             }
         }
@@ -109,6 +109,12 @@ namespace AdvancedYoutubeDownloader
             this.txtBoxLog.AppendText(toPrint);
             if (newLine)
                 this.txtBoxLog.AppendText(Environment.NewLine);
+        }
+
+        private void txtURL_Click(object sender, EventArgs e)
+        {
+            this.txtURL.Text = "";
+            this.txtURL.ForeColor = Color.Black;
         }
     }
 }
